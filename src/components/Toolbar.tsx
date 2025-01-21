@@ -9,12 +9,12 @@ function Toolbar() {
   return (
       <div className="flex select-none items-center justify-center h-10">
         {/* Toolbar items */}
-        <Group gap="xs">
+        <Group className="h-full">
           <Menu shadow="md" width={200}>
             <Menu.Target>
               <UnstyledButton
                   variant="subtle"
-                  className="flex h-full items-center gap-1 text-gray-800 hover:bg-gray-200"
+                  className="flex h-full items-center gap-2 text-gray-800"
               >
                 <Rectangle/>
                 Orientation
@@ -31,7 +31,7 @@ function Toolbar() {
             <Menu.Target>
               <UnstyledButton
                   variant="subtle"
-                  className="flex  items-center gap-1 text-gray-800 hover:bg-gray-200"
+                  className="flex h-full items-center gap-2 text-gray-800"
               >
                 <BlueCircle/>
                 Background
@@ -48,7 +48,7 @@ function Toolbar() {
             <Menu.Target>
               <UnstyledButton
                   variant="subtle"
-                  className="flex  items-center gap-1 text-gray-800 hover:bg-gray-200"
+                  className="flex h-full items-center gap-2 text-gray-800"
               >
                 <Square/>
                 Opacity
@@ -66,7 +66,7 @@ function Toolbar() {
             <Menu.Target>
               <UnstyledButton
                   variant="subtle"
-                  className="flex  items-center gap-1 text-gray-800 hover:bg-gray-200"
+                  className="flex h-full items-center gap-2 text-gray-800"
               >
                 <Blur/>
                 Blur

@@ -128,7 +128,7 @@ export default function App() {
       </AppShell.Aside>
 
       <AppShell.Main>
-        <Flex>
+        <Flex className="overflow-hidden">
           <motion.div
               className="flex flex-col items-center"
               animate={{
