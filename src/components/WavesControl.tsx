@@ -12,6 +12,7 @@ const ZoomButton = ({style}: { style: CSSProperties }) => {
                style={{
                  border: '1px solid #21CCEE',
                  width: "24px",
+                 minWidth: "24px",
                  height: "24px",
                  boxShadow: "0px 3px 9px -3px #00000040"
                }} bg="#CAF6FD" p={3}>
@@ -45,7 +46,7 @@ export const WavesControl = () => {
           <Badge className="ml-1" radius="6px"
                  style={{
                    border: '1px solid #0D4CE166',
-                   width: "34px",
+                   minWidth: "24px",
                    height: "24px",
                    boxShadow: "0px 3px 9px -3px #00000040",
                    background: "linear-gradient(180deg, #D8E4FF 0%, #F6FFFF 100%)"
@@ -87,7 +88,7 @@ export const WavesControl = () => {
           <Badge className="ml-1" radius="6px"
                  style={{
                    border: '1px solid #EE45BC',
-                   width: "34px",
+                   minWidth: "24px",
                    height: "24px",
                    boxShadow: "0px 3px 9px -3px #00000040",
                    background: "linear-gradient(180deg, #FFDEF3 0%, #FEF0F9 100%)"
