@@ -93,7 +93,7 @@ export default function App() {
           {[Video, Video, Video].map((src, index) => (
               <div className="relative">
                 <Image key={index} src={src} tabIndex={index + 1} radius="sm"
-                       className="outline-[#2160FD] focus:outline outline-offset-2"/>
+                       className="outline-[#2160FD] focus:outline outline-2 outline-offset-2"/>
                 <span className="absolute bg-black/30 backdrop-blur-sm rounded-2xl px-1.5 py-0.5 bottom-1 right-1 text-white"
                       style={{fontSize: "9px"}}
                 >00:21</span>

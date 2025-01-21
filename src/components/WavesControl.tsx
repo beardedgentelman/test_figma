@@ -1,24 +1,30 @@
 import {CSSProperties, useState} from 'react';
 import {useMove} from '@mantine/hooks';
-import {Box, Flex, Text, UnstyledButton} from '@mantine/core';
+import {Badge, Flex, Text, UnstyledButton} from '@mantine/core';
 import {ZoomIn, DeviceDesktop, Music} from 'tabler-icons-react';
 import BlueWaves from "../assets/blueWaves.svg";
 import PinkWaves from "../assets/pinkWaves.svg";
 
 const ZoomButton = ({style}: { style: CSSProperties }) => {
   return (
-      <UnstyledButton bg="#A6F0FC" className="rounded flex flex-row items-center justify-start gap-3" style={style}>
-        <Box className="rounded ml-3" bg="#CAF6FD" bd="#21CCEE" p={3}>
+      <UnstyledButton bg="#A6F0FC" className="flex flex-row items-center justify-start gap-2.5" style={style}>
+        <Badge className="ml-1" radius="6px"
+               style={{
+                 border: '1px solid #21CCEE',
+                 width: "24px",
+                 height: "24px",
+                 boxShadow: "0px 3px 9px -3px #00000040"
+               }} bg="#CAF6FD" p={3}>
           <ZoomIn
-              size={16}
+              size={12}
               style={{color: '#228be6'}}
           />
-        </Box>
+        </Badge>
         <Text
             size="sm"
             c="#0C8AB2"
         >
-          Zoom 2s
+          Zoom <span style={{color: "#06AED4"}}>2s</span>
         </Text>
       </UnstyledButton>
   );
@@ -36,14 +42,19 @@ export const WavesControl = () => {
       <Flex className="w-full flex-col gap-2 my-4">
         <div
             className="mx-3 bg-[#D8E4FF] h-12 rounded flex flex-row items-center justify-start relative overflow-hidden">
-          <Box size={24} style={{
-            boxShadow: '0px 3px 9px -3px #00000040'
-          }} className="rounded ml-1.5" bg="#CAF6FD" bd="#0D4CE166" p={2}>
+          <Badge className="ml-1" radius="6px"
+                 style={{
+                   border: '1px solid #0D4CE166',
+                   width: "34px",
+                   height: "24px",
+                   boxShadow: "0px 3px 9px -3px #00000040",
+                   background: "linear-gradient(180deg, #D8E4FF 0%, #F6FFFF 100%)"
+                 }} p={3}>
             <DeviceDesktop
-                size={20}
+                size={12}
                 style={{color: '#228be6'}}
             />
-          </Box>
+          </Badge>
           <span className="gradient-box-blue overflow-hidden"><BlueWaves/></span>
           <span className="overflow-hidden"><BlueWaves/></span>
         </div>
@@ -61,24 +72,31 @@ export const WavesControl = () => {
           <ZoomButton
               style={{
                 position: 'absolute',
+                background: "linear-gradient(180deg, #CAF6FD 0 %, #F4FDFE 100 %)",
                 left: `calc(${value * 100}% - 8px)`,
                 top: 0,
                 width: 180,
-                height: 32,
-                boxShadow: '0px 3px 9px -3px #00000040'
+                borderRadius: "8px",
+                height: 32
               }}
           />
         </div>
         <div
             className="mx-3 bg-[#FEF0F9] h-8 rounded flex flex-row items-center justify-start relative overflow-hidden">
-          <Box size={24} style={{
-            boxShadow: '0px 3px 9px -3px #00000040'
-          }} className="rounded ml-1.5 border-2 border-solid" bg="#FFDEF3" bd="#EE45BC" p={2}>
+
+          <Badge className="ml-1" radius="6px"
+                 style={{
+                   border: '1px solid #EE45BC',
+                   width: "34px",
+                   height: "24px",
+                   boxShadow: "0px 3px 9px -3px #00000040",
+                   background: "linear-gradient(180deg, #FFDEF3 0%, #FEF0F9 100%)"
+                 }} p={3}>
             <Music
-                size={20}
+                size={12}
                 style={{color: '#EE45BC'}}
             />
-          </Box>
+          </Badge>
           <span className="gradient-box-pink overflow-hidden"><PinkWaves/></span>
           <span className="overflow-hidden"><PinkWaves/></span>
         </div>
