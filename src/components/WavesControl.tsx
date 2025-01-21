@@ -37,11 +37,8 @@ export const WavesControl = () => {
         <div
             className="mx-3 bg-[#D8E4FF] h-12 rounded flex flex-row items-center justify-start relative overflow-hidden">
           <Box size={24} style={{
-            boxShadow: '0px 3px 9px -3px #00000040',
-            positions: 'absolute',
-            top: "26px",
-            left: "4px"
-          }} className="rounded ml-2" bg="#CAF6FD" bd="#0D4CE166" p={2}>
+            boxShadow: '0px 3px 9px -3px #00000040'
+          }} className="rounded ml-1.5" bg="#CAF6FD" bd="#0D4CE166" p={2}>
             <DeviceDesktop
                 size={20}
                 style={{color: '#228be6'}}
@@ -75,11 +72,8 @@ export const WavesControl = () => {
         <div
             className="mx-3 bg-[#FEF0F9] h-8 rounded flex flex-row items-center justify-start relative overflow-hidden">
           <Box size={24} style={{
-            boxShadow: '0px 3px 9px -3px #00000040',
-            positions: 'absolute',
-            top: "26px",
-            left: "4px"
-          }} className="rounded ml-2" bg="#FFDEF3" bd="#EE45BC" p={2}>
+            boxShadow: '0px 3px 9px -3px #00000040'
+          }} className="rounded ml-1.5 border-2 border-solid" bg="#FFDEF3" bd="#EE45BC" p={2}>
             <Music
                 size={20}
                 style={{color: '#EE45BC'}}
