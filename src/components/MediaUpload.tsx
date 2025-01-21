@@ -1,4 +1,4 @@
-import {Box, Tabs, Text, Image, SimpleGrid, Group, CloseButton, Divider, Flex} from '@mantine/core';
+import {Box, Tabs, Text, Image, SimpleGrid, CloseButton, Divider, Flex, Badge} from '@mantine/core';
 import {CloudUpload} from 'tabler-icons-react';
 
 const MediaUpload = ({onCloseClick}: { onCloseClick: () => void }) => {
@@ -24,14 +24,16 @@ const MediaUpload = ({onCloseClick}: { onCloseClick: () => void }) => {
               cursor: 'pointer'
             })}
         >
-          <Group>
-            <CloudUpload size={24} color="gray"/>
-            <Text size="sm" c="dimmed">
+          <Flex className="flex-col justify-center items-center">
+            <Badge style={{border: '1px solid #EFEFEF'}} bg="white" size="xl" circle>
+              <CloudUpload size={24} color="#2160FD"/>
+            </Badge>
+            <Text size="sm" className="text-center">
               Drag and drop File
               <br/>
               or click to browse files
             </Text>
-          </Group>
+          </Flex>
         </Box>
 
         {/* Media Tabs */}
@@ -59,6 +61,8 @@ const MediaUpload = ({onCloseClick}: { onCloseClick: () => void }) => {
                 'https://picsum.photos/403/300',
                 'https://picsum.photos/404/300',
                 'https://picsum.photos/405/300',
+                'https://picsum.photos/406/300',
+                'https://picsum.photos/407/300',
               ].map((src, index) => (
                   <Image
                       key={index}
