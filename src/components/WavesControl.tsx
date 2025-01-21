@@ -28,22 +28,27 @@ const ZoomButton = ({style}: { style: CSSProperties }) => {
 export const WavesControl = () => {
   const [value, setValue] = useState(0.2);
   const {ref} = useMove(({x}) => {
-    if (x < 0.87)
+    if (x < 0.87 && x > 0.02)
       setValue(x)
   });
 
   return (
       <Flex className="w-full flex-col gap-2 my-4">
-        <div className="mx-3 bg-[#D8E4FF] h-12 rounded flex flex-row items-center justify-start">
-          <Box style={{
-            boxShadow: '0px 3px 9px -3px #00000040'
-          }} className="rounded ml-3" bg="#CAF6FD" bd="#0D4CE166" p={2}>
+        <div
+            className="mx-3 bg-[#D8E4FF] h-12 rounded flex flex-row items-center justify-start relative overflow-hidden">
+          <Box size={24} style={{
+            boxShadow: '0px 3px 9px -3px #00000040',
+            positions: 'absolute',
+            top: "26px",
+            left: "4px"
+          }} className="rounded ml-2" bg="#CAF6FD" bd="#0D4CE166" p={2}>
             <DeviceDesktop
-                size={16}
+                size={20}
                 style={{color: '#228be6'}}
             />
           </Box>
-          <BlueWaves/>
+          <span className="gradient-box-blue overflow-hidden"><BlueWaves/></span>
+          <span className="overflow-hidden"><BlueWaves/></span>
         </div>
         <div
             ref={ref}
@@ -67,17 +72,21 @@ export const WavesControl = () => {
               }}
           />
         </div>
-        <div className="mx-3 bg-[#F670C71A] h-8 rounded flex flex-row items-center justify-start">
-          <Box style={{
+        <div
+            className="mx-3 bg-[#FEF0F9] h-8 rounded flex flex-row items-center justify-start relative overflow-hidden">
+          <Box size={24} style={{
             boxShadow: '0px 3px 9px -3px #00000040',
-            backdropFilter: 'opacity(20%)'
-          }} className="rounded ml-3" bg="#FFDEF3" bd="#EE45BC" p={2}>
+            positions: 'absolute',
+            top: "26px",
+            left: "4px"
+          }} className="rounded ml-2" bg="#FFDEF3" bd="#EE45BC" p={2}>
             <Music
-                size={16}
+                size={20}
                 style={{color: '#EE45BC'}}
             />
           </Box>
-          <PinkWaves/>
+          <span className="gradient-box-pink overflow-hidden"><PinkWaves/></span>
+          <span className="overflow-hidden"><PinkWaves/></span>
         </div>
       </Flex>
   );

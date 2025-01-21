@@ -1,0 +1,29 @@
+.gradient-box-blue {
+    position: relative;
+}
+
+.gradient-box-blue::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(to left, transparent, #D8E4FF);
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    pointer-events: none;
+}
+
+.gradient-box-pink {
+    position: relative;
+}
+
+.gradient-box-pink::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(to left, transparent, #FEF0F9);
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    pointer-events: none;
+}

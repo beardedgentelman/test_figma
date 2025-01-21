@@ -29,6 +29,7 @@ import {Timeline} from "./components/Timeline.tsx";
 import {WavesControl} from "./components/WavesControl.tsx";
 import MediaUpload from "./components/MediaUpload.tsx";
 import {useState} from "react";
+import "./App.css";
 
 export default function App() {
   const [opened, setOpened] = useState(false);
